@@ -16,7 +16,7 @@ namespace GradeBook.GradeBooks
             if (Students.Count < 5)
                 throw new InvalidOperationException("Ranked-grading requires a minimum of 5 students to work.");
 
-            var fifth = (int)Math.Ceiling(averageGrade);
+            var fifth = (int)Math.Ceiling(0.2 * Students.Count);
             int nHigher = 0;
             foreach (Student student in Students)
                 if (student.AverageGrade > averageGrade) nHigher++;
